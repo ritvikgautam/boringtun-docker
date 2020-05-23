@@ -13,5 +13,5 @@ COPY --from=builder /src/target/release/boringtun /app
 ENV WG_LOG_LEVEL=info \
     WG_THREADS=4
 
-RUN apt-get update && apt-get install -y --no-install-suggests wireguard-tools iproute2 iptables tcpdump
+RUN apt-get update && apt-get install -y --no-install-suggests wireguard iproute2 iptables tcpdump
 CMD ["wg-quick", "up", "$1"]
