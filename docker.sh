@@ -3,12 +3,12 @@
 set -eo pipefail
 
 build() {
-    docker build --rm -f Dockerfile -t borington:latest .
+    docker build --rm -f Dockerfile -t boringtun:latest .
 }
 
 push() {
-    docker tag borington:latest ritvikgautam/borington:latest
-    docker push ritvikgautam/borington:latest
+    docker tag boringtun:latest ritvikgautam/boringtun:latest
+    docker push ritvikgautam/boringtun:latest
 }
 
 if [ "$1" = "build" ]; then
