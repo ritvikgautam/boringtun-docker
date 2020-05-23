@@ -1,4 +1,4 @@
-FROM rust:1.40-slim-buster AS builder
+FROM rust:1.43-slim-buster AS builder
 
 WORKDIR /src
 COPY boringtun .
